@@ -1,7 +1,7 @@
 <style>
 	:global(body) {
-		--mouse-x: 0px;
-		--mouse-y: 0px;
+		--mouse-x: 50%;
+		--mouse-y: 50%;
 	}
 </style>
 
@@ -10,31 +10,38 @@
 
 	let spotlight: HTMLElement | null = null
 
+	const spotlightBg = `
+		radial-gradient(ellipse 115% 78% at var(--mouse-x) var(--mouse-y),
+			color-mix(in srgb, var(--secondary-e1) 48%, transparent) 0%, transparent 52%),
+		radial-gradient(ellipse 340px 280px at var(--mouse-x) var(--mouse-y),
+			color-mix(in srgb, var(--secondary) 42%, transparent) 0%, transparent 46%)
+	`
+		.replace(/\s+/g, ' ')
+		.trim()
+
 	function isMobile() {
 		return window.innerWidth <= 768
 	}
 
-	function centerSpotlight() {
-		if (!isMobile()) return
+	function setPosition(x: number, y: number) {
 		if (!spotlight) return
-		const x = window.innerWidth / 2
-		const y = window.innerHeight / 2
 		spotlight.style.setProperty('--mouse-x', `${x}px`)
 		spotlight.style.setProperty('--mouse-y', `${y}px`)
 	}
 
-	function handleMouseMove(event: MouseEvent) {
-		if (isMobile()) return
-		if (!spotlight) return
-		spotlight.style.setProperty('--mouse-x', `${event.clientX}px`)
-		spotlight.style.setProperty('--mouse-y', `${event.clientY}px`)
+	function centerSpotlight() {
+		if (!isMobile()) return
+		setPosition(window.innerWidth / 2, window.innerHeight / 2)
 	}
 
-	// add event listeners
+	function handleMouseMove(event: MouseEvent) {
+		if (isMobile()) return
+		setPosition(event.clientX, event.clientY)
+	}
+
 	onMount(() => {
 		document.addEventListener('mousemove', handleMouseMove)
 		window.addEventListener('resize', centerSpotlight)
-
 		centerSpotlight()
 	})
 
@@ -46,5 +53,8 @@
 
 <div
 	bind:this={spotlight}
-	class="pointer-events-none fixed inset-0 z-10 bg-spotlight opacity-15 md:opacity-25"
+	class="pointer-events-none fixed inset-0 z-10 mix-blend-screen dark:mix-blend-plus-lighter"
+	style:background={spotlightBg}
+	style:opacity={isMobile() ? 0.15 : 0.2}
+	aria-hidden="true"
 ></div>

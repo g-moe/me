@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+	body {
+		background-color: var(--neutral-e1);
+	}
+
 	:root {
 		--radius: 0.5rem;
 
@@ -19,11 +23,11 @@
 		--primary-h1: #31a034;
 		--primary-h2: #214e1f;
 
-		--secondary-e2: #d2c4ff;
-		--secondary-e1: #9f8bfc;
-		--secondary: #6c6bff;
-		--secondary-h1: #43399e;
-		--secondary-h2: #27204d;
+		--secondary-e2: #b8e8e9;
+		--secondary-e1: #4da8aa;
+		--secondary: #197e80;
+		--secondary-h1: #125a5c;
+		--secondary-h2: #0a3233;
 
 		--neutral-e8: #050607;
 		--neutral-e7: #101316;
@@ -49,11 +53,11 @@
 		--primary-h1: #31a034;
 		--primary-h2: #214e1f;
 
-		--secondary-e2: #d2c4ff;
-		--secondary-e1: #9f8bfc;
-		--secondary: #6c6bff;
-		--secondary-h1: #43399e;
-		--secondary-h2: #27204d;
+		--secondary-e2: #b8e8e9;
+		--secondary-e1: #4da8aa;
+		--secondary: #197e80;
+		--secondary-h1: #125a5c;
+		--secondary-h2: #0a3233;
 
 		--neutral-e8: #fdfdfd;
 		--neutral-e7: #f4f4f9;
