@@ -12,7 +12,9 @@
 <BackgroundCanvas />
 <MouseGlow />
 
-<div class="bg-neutral-e1/85 relative z-20 min-h-screen md:flex dark:bg-neutral-e1/75">
+<div
+	class="bg-neutral-e1/85 dark:bg-neutral-e1/75 relative z-20 min-h-screen select-none md:flex"
+>
 	<Sidebar />
 
 	<div class="flex flex-col md:w-3/5 md:pt-12">

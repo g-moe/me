@@ -45,6 +45,18 @@ export default {
 					e7: 'var(--neutral-e7)',
 					e8: 'var(--neutral-e8)'
 				},
+				/* legacy typo — alias so existing `text-netural-*` classes resolve */
+				netural: {
+					DEFAULT: 'var(--neutral)',
+					e1: 'var(--neutral-e1)',
+					e2: 'var(--neutral-e2)',
+					e3: 'var(--neutral-e3)',
+					e4: 'var(--neutral-e4)',
+					e5: 'var(--neutral-e5)',
+					e6: 'var(--neutral-e6)',
+					e7: 'var(--neutral-e7)',
+					e8: 'var(--neutral-e8)'
+				},
 				primary: {
 					DEFAULT: 'var(--primary)',
 					e1: 'var(--primary-e1)',

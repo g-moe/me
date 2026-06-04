@@ -1,4 +1,6 @@
 <script lang="ts">
+	import GlassProjectCard from '$lib/components/cards/glass-project-card.svelte'
+
 	let {
 		title,
 		description,
@@ -16,50 +18,4 @@
 	}>()
 </script>
 
-<a
-	class="
-	shadow-even-accent bg-neutral-e1 group overflow-hidden rounded-xl transition-all
-	duration-100 hover:scale-105 hover:shadow-secondary hover:brightness-90
-	dark:hover:brightness-125
-	md:shadow-none
-	"
-	href={route}
-	rel={newTab ? 'noopener noreferrer' : undefined}
-	target={newTab ? '_blank' : undefined}
->
-	<div class="flex flex-col md:flex-row">
-		<div class="w-full p-3 pt-6 md:w-1/3">
-			{#if imageUrl}
-				<div
-					class="aspect-rectangle bg-neutral-e1 w-full overflow-hidden rounded-3xl p-6 md:p-2"
-				>
-					<img
-						alt={title}
-						class="shadow-neural-e1 h-full w-full rounded-xl
-						object-cover shadow-sm transition-transform duration-200"
-						src={imageUrl}
-					/>
-				</div>
-			{/if}
-		</div>
-		<div class="w-full p-6 md:w-2/3">
-			<h3
-				class="text-netural-e8 mb-2 text-xl font-semibold transition-colors
-				 group-hover:font-bold group-hover:text-secondary"
-			>
-				{title}
-			</h3>
-			<p class="text-netural-e4 mb-4">{description}</p>
-		</div>
-	</div>
-
-	{#if tags && tags.length > 0}
-		<div class="flex flex-wrap gap-2 p-4 pb-8">
-			{#each tags as tag}
-				<span class="rounded-lg bg-secondary px-3 py-1 text-sm text-white"
-					>{tag}</span
-				>
-			{/each}
-		</div>
-	{/if}
-</a>
+<GlassProjectCard {title} {description} {imageUrl} {newTab} {route} {tags} />
