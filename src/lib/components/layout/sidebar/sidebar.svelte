@@ -113,22 +113,6 @@ md:flex-col md:p-12 md:px-24 md:py-20 md:backdrop-blur-none"
 >
 	<!-- Header Section with Name -->
 	<div>
-		<div class="flex items-center justify-between md:mb-8 md:block">
-			<!-- Name and Title -->
-			<div>
-				<a
-					class="flex cursor-pointer flex-col gap-2 md:gap-4"
-					href="/"
-					onclick={() => {
-						return window.scrollTo(0, 0)
-					}}
-				>
-					<h1 class="text-netural-e8 text-2xl font-bold md:text-4xl">Gary</h1>
-					<p class="md:text-md text-netural-e8 text-xl">Full-Stack Dev</p>
-				</a>
-			</div>
-		</div>
-
 		<!-- Navigation Menu -->
 		<nav class="mt-6 md:mt-24">
 			<ul
