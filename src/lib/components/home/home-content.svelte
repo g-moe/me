@@ -82,7 +82,7 @@
 					using Python & TKinter, the other is a chrome extension built using vanilla JS/CSS."
 				imageUrl="/indicator-manager.gif"
 				newTab={true}
-				route="https://github.com/gary-ix/Tradingview-Indicator-Manager"
+				route="https://github.com/g-moe/Tradingview-Indicator-Manager"
 				tags={['Python', 'Typescript', 'Chrome Extension', 'API', 'SQLite']}
 				title="Tradingview Indicator Manager"
 			/>
@@ -92,7 +92,7 @@
 					  also includes a Youtube Livestream Chatbot."
 				imageUrl="/antispam.png"
 				newTab={true}
-				route="https://github.com/gary-ix/Discord-Antispam-Bot"
+				route="https://github.com/g-moe/Discord-Antispam-Bot"
 				tags={['Python', 'Docker', 'VPS', 'Image Matching/Comparison']}
 				title="Discord Antispam Bot"
 			/>
@@ -102,7 +102,7 @@
 					 price/indicator value updates every minute, as well as a news bot that broadcasts live market news."
 				imageUrl="/discord-market-bots.png"
 				newTab={true}
-				route="https://github.com/gary-ix/Discord-Market-Bots"
+				route="https://github.com/g-moe/Discord-Market-Bots"
 				tags={['NodeJs', 'Docker', 'Redis', 'Express', 'Cloudflare']}
 				title="Discord Market Bots"
 			/>
@@ -111,7 +111,7 @@
 				description="Freelance programming of over a thousand custom indicators...written in a variety of languages."
 				imageUrl="/indicator.png"
 				newTab={true}
-				route="https://github.com/gary-ix/Trading-Indicators"
+				route="https://github.com/g-moe/Trading-Indicators"
 				tags={['Pinescript', 'Python', 'Thinkscript', 'C++', 'TS-EasyLanguage']}
 				title="Trading Indicators"
 			/>
@@ -120,7 +120,7 @@
 		<div class="mt-12 text-center">
 			<Button
 				class="text-netural-e4 text-sm font-medium"
-				href="https://github.com/gary-ix"
+				href="https://github.com/g-moe"
 				rel="noopener noreferrer"
 				target="_blank"
 				variant="outline"
