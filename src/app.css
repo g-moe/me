@@ -1,6 +1,32 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@plugin 'tailwind-scrollbar';
+
+@source './**/*.{html,js,svelte,ts}';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+	--color-neutral: var(--neutral);
+	--color-neutral-e1: var(--neutral-e1);
+	--color-neutral-e2: var(--neutral-e2);
+	--color-neutral-e3: var(--neutral-e3);
+	--color-neutral-e4: var(--neutral-e4);
+	--color-neutral-e5: var(--neutral-e5);
+	--color-neutral-e6: var(--neutral-e6);
+	--color-neutral-e7: var(--neutral-e7);
+	--color-neutral-e8: var(--neutral-e8);
+	--color-primary: var(--primary);
+	--color-secondary: var(--secondary);
+	--color-system-error: var(--system-error);
+	--color-text-black: var(--text-black);
+	--color-text-white: var(--text-white);
+
+	--radius-lg: var(--radius);
+	--radius-md: calc(var(--radius) - 2px);
+	--radius-sm: calc(var(--radius) - 4px);
+
+	--shadow-even-accent: 0 0 4px 0 var(--secondary);
+}
 
 @layer base {
 	body {
@@ -15,21 +41,10 @@
 		--text-black: #050607;
 		/* always the same regardless of theme */
 
-		--test: #85338a;
-
-		--primary-e2: #ceffc6;
-		--primary-e1: #95fe8b;
 		--primary: #36fb48;
-		--primary-h1: #31a034;
-		--primary-h2: #214e1f;
 
-		--secondary-e2: #b8e9d1;
-		--secondary-e1: #4daa7d;
-		--secondary: #19804e;
-		--secondary-h1: #125c38;
-		--secondary-h2: #0a331f;
-
-		--mint: rgb(57, 111, 85);
+		--secondary-e1: #4da8aa;
+		--secondary: #197e80;
 
 		--neutral-e8: #050607;
 		--neutral-e7: #101316;
@@ -41,8 +56,6 @@
 		--neutral-e1: #f4f4f9;
 		--neutral: #fdfdfd;
 
-		--system-success: #36fb48;
-		--system-warning: #ffce2e;
 		--system-error: #ef2424;
 
 		--glass-cool: 214, 218, 228;
@@ -55,21 +68,10 @@
 	}
 
 	.dark {
-		--test: #f200ff;
-
-		--primary-e2: #ceffc6;
-		--primary-e1: #95fe8b;
 		--primary: #36fb48;
-		--primary-h1: #31a034;
-		--primary-h2: #214e1f;
 
-		--secondary-e2: #b8e9d1;
-		--secondary-e1: #4daa7d;
-		--secondary: #19804e;
-		--secondary-h1: #125c38;
-		--secondary-h2: #0a331f;
-
-		--mint: #98fbcb;
+		--secondary-e1: #4da8aa;
+		--secondary: #197e80;
 
 		--neutral-e8: #fdfdfd;
 		--neutral-e7: #f4f4f9;
@@ -81,8 +83,6 @@
 		--neutral-e1: #101316;
 		--neutral: #050607;
 
-		--system-success: #36fb48;
-		--system-warning: #ffce2e;
 		--system-error: #ef2424;
 
 		--glass-cool: 186, 192, 204;
@@ -202,7 +202,6 @@
 
 	.glass-card__title {
 		margin: 0 0 0.5rem;
-		font-size: 1.125rem;
 		font-weight: 600;
 		line-height: 1.3;
 		color: var(--neutral-e8);
@@ -210,7 +209,6 @@
 
 	.glass-card__description {
 		margin: 0;
-		font-size: 0.925rem;
 		line-height: 1.65;
 		color: var(--neutral-e4);
 	}
@@ -233,7 +231,6 @@
 
 	.glass-card__tag {
 		display: inline-block;
-		font-size: 0.75rem;
 		font-weight: 500;
 		line-height: 1.25;
 		padding: 0.28rem 0.65rem;

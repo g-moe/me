@@ -13,6 +13,13 @@
 
 	let isProjectsRoute = $state($page.url.pathname.startsWith('/projects'))
 
+	function isActiveSection(section: string) {
+		return (
+			activeSection === section.toLowerCase() ||
+			(section === 'PROJECTS' && isProjectsRoute)
+		)
+	}
+
 	async function navigateOrScroll(event: MouseEvent, sectionId: string) {
 		event.preventDefault()
 		const isHome = $page.url.pathname === '/'
@@ -109,8 +116,7 @@
 					<li>
 						<a
 							class="group relative block px-2 py-1.5 text-left text-lg font-medium transition-all duration-300"
-							class:active-section={activeSection === section.toLowerCase() ||
-								(section === 'PROJECTS' && isProjectsRoute)}
+							class:active-section={isActiveSection(section)}
 							href={`/#${section.toLowerCase()}`}
 							onclick={e => {
 								return navigateOrScroll(e, section.toLowerCase())
@@ -118,30 +124,16 @@
 						>
 							<span
 								class="absolute left-0 transition-all duration-300"
-								class:opacity-0={activeSection !== section.toLowerCase() &&
-									!(section === 'PROJECTS' && isProjectsRoute)}
-								class:opacity-100={activeSection === section.toLowerCase() ||
-									(section === 'PROJECTS' && isProjectsRoute)}
+								class:opacity-0={!isActiveSection(section)}
+								class:opacity-100={isActiveSection(section)}
 							>
-								{activeSection === section.toLowerCase() ||
-								(section === 'PROJECTS' && isProjectsRoute)
-									? '📈'
-									: ''}
+								{isActiveSection(section) ? '📈' : ''}
 							</span>
 							<span
-								class="group-hover:text-mint elative z-10 transition-all duration-300"
-								class:font-bold={activeSection === section.toLowerCase() ||
-									(section === 'PROJECTS' && isProjectsRoute)}
-								class:pl-6={activeSection === section.toLowerCase() ||
-									(section === 'PROJECTS' && isProjectsRoute)}
-								class:translate-x-4={activeSection === section.toLowerCase() ||
-									(section === 'PROJECTS' && isProjectsRoute)}
-								class:text-netural-e8={activeSection ===
-									section.toLowerCase() ||
-									(section === 'PROJECTS' && isProjectsRoute)}
-								class:text-neutral-e8={activeSection !==
-									section.toLowerCase() &&
-									!(section === 'PROJECTS' && isProjectsRoute)}
+								class="group-hover:text-neutral-e4 relative z-10 text-neutral-e8 transition-all duration-300"
+								class:font-bold={isActiveSection(section)}
+								class:pl-6={isActiveSection(section)}
+								class:translate-x-4={isActiveSection(section)}
 							>
 								{section}
 							</span>

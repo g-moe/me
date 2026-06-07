@@ -1,7 +1,9 @@
 import { describe, expect, it } from 'vitest'
 
-describe('sum test', () => {
-	it('adds 1 + 2 to equal 3', () => {
-		expect(1 + 2).toBe(3)
+import { cn } from '$lib/utils'
+
+describe('cn', () => {
+	it('resolves Tailwind conflicts', () => {
+		expect(cn('px-2', 'px-4')).toBe('px-4')
 	})
 })

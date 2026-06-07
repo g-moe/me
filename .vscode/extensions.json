@@ -1,0 +1,9 @@
+{
+	"recommendations": [
+		"bradlc.vscode-tailwindcss",
+		"ms-playwright.playwright",
+		"oxc.oxc-vscode",
+		"svelte.svelte-vscode",
+		"TypeScriptTeam.native-preview"
+	]
+}

@@ -1,0 +1,19 @@
+{
+	"$schema": "./node_modules/oxlint/configuration_schema.json",
+	"ignorePatterns": [
+		".svelte-kit/**",
+		"build/**",
+		"node_modules/**",
+		"src/**/*.svelte"
+	],
+	"plugins": ["typescript", "unicorn", "oxc", "import", "vitest"],
+	"rules": {
+		"no-debugger": "error",
+		"no-unused-vars": [
+			"warn",
+			{
+				"varsIgnorePattern": "^\\$\\$"
+			}
+		]
+	}
+}

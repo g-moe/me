@@ -1,14 +1,21 @@
 <script lang="ts">
 	interface Props {
-		title: string
 		description: string
-		route: string
 		imageUrl?: string
 		newTab?: boolean
+		route: string
 		tags?: string[]
+		title: string
 	}
 
-	let { title, description, imageUrl, newTab = false, route, tags }: Props = $props()
+	let {
+		description,
+		imageUrl,
+		newTab = false,
+		route,
+		tags,
+		title
+	}: Props = $props()
 </script>
 
 <a
@@ -20,7 +27,12 @@
 	<div class="glass-card__body">
 		{#if imageUrl}
 			<figure class="glass-card__media">
-				<img alt={title} class="glass-card__image" loading="lazy" src={imageUrl} />
+				<img
+					alt={title}
+					class="glass-card__image"
+					loading="lazy"
+					src={imageUrl}
+				/>
 			</figure>
 		{/if}
 		<div class="glass-card__copy">

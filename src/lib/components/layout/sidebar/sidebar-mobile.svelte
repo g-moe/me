@@ -38,7 +38,9 @@
 <svelte:window onkeydown={handleKeydown} />
 
 <header
-	class="fixed inset-x-0 top-0 z-[60] flex h-14 items-center justify-end px-4 transition-[background-color,box-shadow,border-color,backdrop-filter] duration-300"
+	class="fixed inset-x-0 top-0 z-[60] flex h-14 items-center justify-end
+		px-4 transition-[background-color,box-shadow,border-color,backdrop-filter]
+		duration-300"
 	style={showHeaderBg
 		? `
 			background: var(--glass-fill);
@@ -56,7 +58,7 @@
 		`}
 >
 	<Button
-		class="scale-100 rounded-full bg-transparent text-netural-e8 hover:scale-100 hover:bg-transparent"
+		class="scale-100 rounded-full bg-transparent text-neutral-e8 hover:scale-100 hover:bg-transparent"
 		aria-expanded={isOpen}
 		aria-label={isOpen ? 'Close menu' : 'Open menu'}
 		onclick={toggleMenu}
@@ -91,7 +93,9 @@
 		<button
 			type="button"
 			role="menuitem"
-			class="flex w-full min-w-[10rem] items-center justify-between gap-4 rounded-none p-2 text-sm font-medium text-neutral-e8 transition-colors hover:bg-secondary hover:text-[var(--text-white)]"
+			class="flex w-full min-w-[10rem] items-center justify-between gap-4
+				rounded-none p-2 text-sm font-medium text-neutral-e8 transition-colors
+				hover:bg-secondary hover:text-[var(--text-white)]"
 			onclick={toggleMode}
 		>
 			Theme

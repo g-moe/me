@@ -35,10 +35,12 @@
 	$effect(() => {
 		resize()
 		let raf = 0
+
 		const loop = () => {
 			tick()
 			raf = requestAnimationFrame(loop)
 		}
+
 		raf = requestAnimationFrame(loop)
 		window.addEventListener('resize', resize)
 

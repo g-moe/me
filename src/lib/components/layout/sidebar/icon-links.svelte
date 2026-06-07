@@ -1,26 +1,26 @@
 <script lang="ts">
-	import { Github, Mail, Twitter } from '@lucide/svelte'
+	import { Code, MessageCircle } from '@lucide/svelte'
 	import { Button } from '$lib/components/ui/button'
 </script>
 
 <Button
 	aria-label="GitHub"
-	class="text-netural-e8 rounded-full bg-transparent p-2"
+	class="text-neutral-e8 rounded-full bg-transparent p-2"
 	href="https://github.com/g-moe"
 	rel="noopener noreferrer"
 	target="_blank"
 	variant="ghost"
 >
-	<Github />
+	<Code />
 </Button>
 
 <Button
-	aria-label="Twitter"
-	class="text-netural-e8 inline-block rounded-full bg-transparent p-2"
+	aria-label="X"
+	class="text-neutral-e8 inline-block rounded-full bg-transparent p-2"
 	href="https://x.com/gmoe_ix"
 	rel="noopener noreferrer"
 	target="_blank"
 	variant="ghost"
 >
-	<Twitter />
+	<MessageCircle />
 </Button>

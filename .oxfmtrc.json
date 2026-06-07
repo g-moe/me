@@ -1,0 +1,16 @@
+{
+	"$schema": "./node_modules/oxfmt/configuration_schema.json",
+	"ignorePatterns": [
+		".svelte-kit/**",
+		"build/**",
+		"node_modules/**",
+		"src/**/*.svelte"
+	],
+	"printWidth": 80,
+	"semi": false,
+	"singleQuote": true,
+	"sortTailwindcss": true,
+	"tabWidth": 2,
+	"trailingComma": "none",
+	"useTabs": true
+}

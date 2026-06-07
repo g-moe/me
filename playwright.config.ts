@@ -4,7 +4,7 @@ const config: PlaywrightTestConfig = {
 	testDir: 'tests',
 	testMatch: /(.+\.)?(test|spec)\.[jt]s/,
 	webServer: {
-		command: 'npm run build && npm run preview',
+		command: 'corepack pnpm run preview',
 		port: 4173
 	}
 }

@@ -2,20 +2,27 @@
 	import GlassProjectCard from '$lib/components/cards/glass-project-card.svelte'
 
 	let {
-		title,
 		description,
 		imageUrl,
 		newTab = false,
 		route,
-		tags
+		tags,
+		title
 	} = $props<{
-		title: string
 		description: string
-		route: string
 		imageUrl?: string
 		newTab?: boolean
+		route: string
 		tags?: string[]
+		title: string
 	}>()
 </script>
 
-<GlassProjectCard {title} {description} {imageUrl} {newTab} {route} {tags} />
+<GlassProjectCard
+	title={title}
+	description={description}
+	imageUrl={imageUrl}
+	newTab={newTab}
+	route={route}
+	tags={tags}
+/>
