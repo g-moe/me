@@ -17,6 +17,7 @@
 	--color-neutral-e8: var(--neutral-e8);
 	--color-primary: var(--primary);
 	--color-secondary: var(--secondary);
+	--color-mint: var(--mint);
 	--color-system-error: var(--system-error);
 	--color-text-black: var(--text-black);
 	--color-text-white: var(--text-white);
@@ -43,8 +44,9 @@
 
 		--primary: #36fb48;
 
-		--secondary-e1: #4da8aa;
-		--secondary: #197e80;
+		--secondary-e1: #4daa7d;
+		--secondary: #19804e;
+		--mint: #396f55;
 
 		--neutral-e8: #050607;
 		--neutral-e7: #101316;
@@ -59,7 +61,7 @@
 		--system-error: #ef2424;
 
 		--glass-cool: 214, 218, 228;
-		--glass-teal: 25, 126, 128;
+		--glass-teal: 25, 128, 78;
 		--glass-blur: 24px;
 		--glass-fill: rgba(var(--glass-cool), 0.38);
 		--glass-fill-hover: rgba(var(--glass-cool), 0.48);
@@ -70,8 +72,9 @@
 	.dark {
 		--primary: #36fb48;
 
-		--secondary-e1: #4da8aa;
-		--secondary: #197e80;
+		--secondary-e1: #4daa7d;
+		--secondary: #19804e;
+		--mint: #6cc99c;
 
 		--neutral-e8: #fdfdfd;
 		--neutral-e7: #f4f4f9;
@@ -86,7 +89,7 @@
 		--system-error: #ef2424;
 
 		--glass-cool: 186, 192, 204;
-		--glass-teal: 25, 126, 128;
+		--glass-teal: 25, 128, 78;
 		--glass-blur: 18px;
 		--glass-fill: rgba(var(--glass-cool), 0.045);
 		--glass-fill-hover: rgba(var(--glass-cool), 0.07);

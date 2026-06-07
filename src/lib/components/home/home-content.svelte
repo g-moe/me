@@ -5,41 +5,39 @@
 
 <div class="flex flex-col space-y-24">
 	<section id="about">
-		<h2 class="text-neutral-e8 mb-8 text-3xl font-bold">
+		<h2 class="mb-8 text-3xl font-bold text-neutral-e8">
 			About <span class="ml-2"></span>
 		</h2>
-		<div class="text-base text-neutral-e4 select-none space-y-6">
+		<div class="select-none space-y-6 text-base text-neutral-e5">
 			<p class="leading-relaxed">
-				Hi (hello world), My name is <span class="font-bold text-secondary"
-					>Garrett</span
-				>, and programming started for me by being a curious child who liked to
-				play on the computer.
+				Hi I'm <span class="font-bold text-mint">Garrett</span>, and programming
+				started for me by being a curious kid who liked to play on the computer.
 			</p>
 
 			<p class="leading-relaxed">
 				Currently I am building the best retail trading platform,
-				<span class="font-bold text-secondary">Tradester </span>, which I
-				co-founded. I enjoy making things
-				<span class="font-bold text-secondary">look good</span> and
-				<span class="font-bold text-secondary"> fast</span>
+				<span class="font-bold text-mint">Tradester </span>, which I help
+				co-found. I enjoy making things
+				<span class="font-bold text-mint">look good</span> and
+				<span class="font-bold text-mint"> fast</span>
 				through multiple iterations. In my free time I
-				<span class="font-bold text-secondary">build</span> various tools (many
+				<span class="font-bold text-mint">build</span> various tools (many
 				trading related), and dabble in whatever re-ignites that childhood
-				<span class="font-bold text-secondary">curiosity</span>.
+				<span class="font-bold text-mint">curiosity</span>.
 			</p>
 
 			<p class="leading-relaxed">
 				When I am not programming and am touching grass I enjoy playing
-				<span class="font-bold text-secondary"> golf, </span> going on
-				<span class="font-bold text-secondary">walks </span>, and
-				<span class="font-bold text-secondary"> socializing</span>
+				<span class="font-bold text-mint"> golf, </span> going on
+				<span class="font-bold text-mint">walks </span>, and
+				<span class="font-bold text-mint"> socializing</span>
 				with friends and family.
 			</p>
 		</div>
 	</section>
 
 	<section id="projects">
-		<h2 class="text-neutral-e8 mb-8 text-3xl font-bold">
+		<h2 class="mb-8 text-3xl font-bold text-neutral-e8">
 			Projects <span class="ml-2"></span>
 		</h2>
 		<div class="flex flex-col space-y-12">
@@ -119,7 +117,7 @@
 
 		<div class="mt-12 text-center">
 			<Button
-				class="text-neutral-e4 text-sm font-medium"
+				class="text-sm font-medium text-neutral-e4"
 				href="https://github.com/g-moe"
 				rel="noopener noreferrer"
 				target="_blank"

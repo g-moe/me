@@ -130,7 +130,7 @@
 								{isActiveSection(section) ? '📈' : ''}
 							</span>
 							<span
-								class="group-hover:text-neutral-e4 relative z-10 text-neutral-e8 transition-all duration-300"
+								class="relative z-10 text-neutral-e8 transition-all duration-300 group-hover:text-mint"
 								class:font-bold={isActiveSection(section)}
 								class:pl-6={isActiveSection(section)}
 								class:translate-x-4={isActiveSection(section)}
