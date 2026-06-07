@@ -101,9 +101,7 @@
 	<ThemeMode />
 </div>
 
-<div
-	class="sticky top-0 z-50 flex h-screen w-2/5 flex-col p-12 px-24 py-20"
->
+<div class="sticky top-0 z-50 flex h-screen w-2/5 flex-col p-12 px-24 py-20">
 	<div>
 		<nav class="mt-24">
 			<ul class="flex flex-col space-y-2 px-0">
@@ -131,16 +129,18 @@
 									: ''}
 							</span>
 							<span
-								class="group-hover:text-netural-e4 relative z-10 transition-all duration-300"
+								class="group-hover:text-mint elative z-10 transition-all duration-300"
 								class:font-bold={activeSection === section.toLowerCase() ||
 									(section === 'PROJECTS' && isProjectsRoute)}
 								class:pl-6={activeSection === section.toLowerCase() ||
 									(section === 'PROJECTS' && isProjectsRoute)}
 								class:translate-x-4={activeSection === section.toLowerCase() ||
 									(section === 'PROJECTS' && isProjectsRoute)}
-								class:text-netural-e8={activeSection === section.toLowerCase() ||
+								class:text-netural-e8={activeSection ===
+									section.toLowerCase() ||
 									(section === 'PROJECTS' && isProjectsRoute)}
-								class:text-neutral-e8={activeSection !== section.toLowerCase() &&
+								class:text-neutral-e8={activeSection !==
+									section.toLowerCase() &&
 									!(section === 'PROJECTS' && isProjectsRoute)}
 							>
 								{section}
