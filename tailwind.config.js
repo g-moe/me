@@ -76,6 +76,7 @@ export default {
 					success: 'var(--system-success)',
 					warning: 'var(--system-warning)'
 				},
+				mint: 'var(--mint)',
 				test: 'var(--test)',
 				text: {
 					black: 'var(--text-black)',
