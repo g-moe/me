@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@600;700;800&display=swap');
 @import 'tailwindcss';
 @plugin 'tailwind-scrollbar';
 
@@ -26,6 +27,8 @@
 	--radius-md: calc(var(--radius) - 2px);
 	--radius-sm: calc(var(--radius) - 4px);
 
+	--font-display: 'Oxanium', ui-sans-serif, system-ui, sans-serif;
+
 	--shadow-even-accent: 0 0 4px 0 var(--secondary);
 }
 
@@ -42,11 +45,11 @@
 		--text-black: #050607;
 		/* always the same regardless of theme */
 
-		--primary: #36fb48;
+		--primary: #55d6a0;
 
-		--secondary-e1: #4daa7d;
-		--secondary: #19804e;
-		--mint: #396f55;
+		--secondary-e1: #4aa987;
+		--secondary: #1f7a61;
+		--mint: #24765f;
 
 		--neutral-e8: #050607;
 		--neutral-e7: #101316;
@@ -61,7 +64,7 @@
 		--system-error: #ef2424;
 
 		--glass-cool: 214, 218, 228;
-		--glass-teal: 25, 128, 78;
+		--glass-teal: 31, 122, 97;
 		--glass-blur: 24px;
 		--glass-fill: rgba(var(--glass-cool), 0.38);
 		--glass-fill-hover: rgba(var(--glass-cool), 0.48);
@@ -70,184 +73,30 @@
 	}
 
 	.dark {
-		--primary: #36fb48;
+		--primary: #5fc9a0;
 
-		--secondary-e1: #4daa7d;
-		--secondary: #19804e;
-		--mint: #6cc99c;
+		--secondary-e1: #50ad93;
+		--secondary: #2f8f75;
+		--mint: #63c6a2;
 
-		--neutral-e8: #fdfdfd;
-		--neutral-e7: #f4f4f9;
-		--neutral-e6: #d9daec;
-		--neutral-e5: #c6c7d8;
-		--neutral-e4: #7c7d8d;
-		--neutral-e3: #656675;
-		--neutral-e2: #262838;
-		--neutral-e1: #101316;
-		--neutral: #050607;
+		--neutral-e8: #eef4f1;
+		--neutral-e7: #e2ebe7;
+		--neutral-e6: #c8d5d0;
+		--neutral-e5: #adbbb6;
+		--neutral-e4: #7b8985;
+		--neutral-e3: #586662;
+		--neutral-e2: #1b222b;
+		--neutral-e1: #10151b;
+		--neutral: #070b10;
 
 		--system-error: #ef2424;
 
-		--glass-cool: 186, 192, 204;
-		--glass-teal: 25, 128, 78;
+		--glass-cool: 190, 198, 208;
+		--glass-teal: 65, 196, 162;
 		--glass-blur: 18px;
-		--glass-fill: rgba(var(--glass-cool), 0.045);
-		--glass-fill-hover: rgba(var(--glass-cool), 0.07);
-		--glass-edge: rgba(186, 192, 204, 0.1);
+		--glass-fill: rgba(var(--glass-cool), 0.038);
+		--glass-fill-hover: rgba(var(--glass-cool), 0.047);
+		--glass-edge: rgba(186, 192, 204, 0.09);
 		--glass-shadow: 0 12px 40px rgba(0, 0, 0, 0.26);
-	}
-}
-
-@layer components {
-	/* ─── Frosted glass project cards ─── */
-	.glass-card {
-		display: flex;
-		flex-direction: column;
-		position: relative;
-		overflow: hidden;
-		border-radius: 1.125rem;
-		border: 1px solid var(--glass-edge);
-		background: var(--glass-fill);
-		box-shadow: var(--glass-shadow);
-		backdrop-filter: blur(var(--glass-blur));
-		-webkit-backdrop-filter: blur(var(--glass-blur));
-		text-decoration: none;
-		transition:
-			background 0.35s ease,
-			border-color 0.35s ease,
-			box-shadow 0.35s ease,
-			transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-
-	.glass-card:hover {
-		background: color-mix(
-			in srgb,
-			rgb(var(--glass-teal)) 7%,
-			var(--glass-fill-hover)
-		);
-		border-color: color-mix(
-			in srgb,
-			var(--glass-edge) 70%,
-			rgb(var(--glass-cool))
-		);
-		transform: translateY(-2px);
-		box-shadow: 0 14px 40px rgba(16, 19, 30, 0.1);
-	}
-
-	.dark .glass-card:hover {
-		background: color-mix(
-			in srgb,
-			rgb(var(--glass-teal)) 9%,
-			var(--glass-fill-hover)
-		);
-		border-color: color-mix(
-			in srgb,
-			var(--glass-edge) 70%,
-			rgb(var(--glass-cool))
-		);
-		box-shadow: 0 16px 44px rgba(0, 0, 0, 0.35);
-	}
-
-	.glass-card__body {
-		display: flex;
-		flex: 1;
-		flex-direction: column;
-	}
-
-	@media (min-width: 768px) {
-		.glass-card__body {
-			flex-direction: row;
-			align-items: stretch;
-		}
-	}
-
-	.glass-card__media {
-		margin: 0;
-		width: 100%;
-		flex-shrink: 0;
-		aspect-ratio: 4 / 3;
-		overflow: hidden;
-		border-radius: 0.875rem;
-		padding: 1.25rem 1.25rem 0;
-	}
-
-	@media (min-width: 768px) {
-		.glass-card__media {
-			width: 34%;
-			padding: 1.5rem 0 1.5rem 1.5rem;
-		}
-	}
-
-	.glass-card__image {
-		display: block;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		border-radius: 0.75rem;
-		transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-
-	.glass-card:hover .glass-card__image {
-		transform: scale(1.02);
-	}
-
-	.glass-card__copy {
-		padding: 1.25rem 1.5rem 1rem;
-		flex: 1;
-		min-width: 0;
-	}
-
-	@media (min-width: 768px) {
-		.glass-card__copy {
-			padding: 1.75rem 1.5rem 1.25rem 1.25rem;
-		}
-	}
-
-	.glass-card__title {
-		margin: 0 0 0.5rem;
-		font-weight: 600;
-		line-height: 1.3;
-		color: var(--neutral-e8);
-	}
-
-	.glass-card__description {
-		margin: 0;
-		line-height: 1.65;
-		color: var(--neutral-e4);
-	}
-
-	.glass-card__tags {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		gap: 0.375rem 0.5rem;
-		margin: 0;
-		padding: 1rem 1.5rem;
-		list-style: none;
-		border-top: 1px solid color-mix(in srgb, var(--neutral-e8) 7%, transparent);
-	}
-
-	.glass-card__tags li {
-		display: flex;
-		align-items: center;
-	}
-
-	.glass-card__tag {
-		display: inline-block;
-		font-weight: 500;
-		line-height: 1.25;
-		padding: 0.28rem 0.65rem;
-		border-radius: 9999px;
-		border: 1px solid color-mix(in srgb, var(--neutral-e4) 28%, transparent);
-		background: color-mix(in srgb, var(--neutral-e4) 18%, transparent);
-		color: var(--neutral-e5);
-		backdrop-filter: blur(6px);
-		-webkit-backdrop-filter: blur(6px);
-	}
-
-	.dark .glass-card__tag {
-		border-color: color-mix(in srgb, var(--neutral-e4) 14%, transparent);
-		background: color-mix(in srgb, var(--neutral-e4) 10%, transparent);
-		color: var(--neutral-e4);
 	}
 }

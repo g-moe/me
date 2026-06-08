@@ -5,7 +5,7 @@
 
 <div class="flex flex-col space-y-24">
 	<section id="about">
-		<h2 class="mb-8 text-3xl font-bold text-neutral-e8">
+		<h2 class="font-display mb-8 text-3xl font-semibold text-neutral-e8">
 			About <span class="ml-2"></span>
 		</h2>
 		<div class="select-none space-y-6 text-base text-neutral-e5">
@@ -37,7 +37,7 @@
 	</section>
 
 	<section id="projects">
-		<h2 class="mb-8 text-3xl font-bold text-neutral-e8">
+		<h2 class="font-display mb-8 text-3xl font-semibold text-neutral-e8">
 			Projects <span class="ml-2"></span>
 		</h2>
 		<div class="flex flex-col space-y-12">

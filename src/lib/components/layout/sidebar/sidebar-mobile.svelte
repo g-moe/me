@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Menu, Moon, Sun, X } from '@lucide/svelte'
+	import { House, Menu, Moon, NotebookText, Sun, X } from '@lucide/svelte'
 	import { Button } from '$lib/components/ui/button'
 	import { mode, toggleMode } from 'mode-watcher'
 	import { onMount } from 'svelte'
@@ -58,7 +58,8 @@
 		`}
 >
 	<Button
-		class="scale-100 rounded-full bg-transparent text-neutral-e8 hover:scale-100 hover:bg-transparent"
+		class="scale-100 rounded-full bg-transparent text-neutral-e8 hover:scale-100
+			hover:bg-transparent focus-visible:ring-0"
 		aria-expanded={isOpen}
 		aria-label={isOpen ? 'Close menu' : 'Open menu'}
 		onclick={toggleMenu}
@@ -74,7 +75,7 @@
 
 {#if isOpen}
 	<button
-		class="bg-neutral-e8/20 fixed inset-0 z-[55] backdrop-blur-sm"
+		class="bg-neutral-e8/5 fixed inset-0 z-[55]"
 		aria-label="Close menu"
 		onclick={closeMenu}
 	></button>
@@ -90,20 +91,45 @@
 		"
 		role="menu"
 	>
+		<a
+			role="menuitem"
+			class="flex w-full min-w-[10rem] items-center gap-3
+				rounded-none p-2 text-sm font-medium text-neutral-e8 transition-colors
+				hover:bg-neutral-e8/10 hover:text-neutral-e8"
+			href="/"
+			onclick={closeMenu}
+		>
+			<House class="size-4" />
+			<span>Home</span>
+		</a>
+		<a
+			role="menuitem"
+			class="flex w-full min-w-[10rem] items-center gap-3
+				rounded-none p-2 text-sm font-medium text-neutral-e8 transition-colors
+				hover:bg-neutral-e8/10 hover:text-neutral-e8"
+			href="/blog"
+			onclick={closeMenu}
+		>
+			<NotebookText class="size-4" />
+			<span>Blog</span>
+		</a>
+
+		<div class="my-1 border-t border-(--glass-edge)"></div>
+
 		<button
 			type="button"
 			role="menuitem"
-			class="flex w-full min-w-[10rem] items-center justify-between gap-4
+			class="flex w-full min-w-[10rem] items-center gap-3
 				rounded-none p-2 text-sm font-medium text-neutral-e8 transition-colors
-				hover:bg-secondary hover:text-[var(--text-white)]"
+				hover:bg-neutral-e8/10 hover:text-neutral-e8"
 			onclick={toggleMode}
 		>
-			Theme
 			{#if mode.current === 'dark'}
-				<Moon class="size-5" />
+				<Moon class="size-4" />
 			{:else}
-				<Sun class="size-5" />
+				<Sun class="size-4" />
 			{/if}
+			<span>Toggle Theme</span>
 		</button>
 	</div>
 {/if}

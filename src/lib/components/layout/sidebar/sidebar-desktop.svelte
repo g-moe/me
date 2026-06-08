@@ -11,17 +11,25 @@
 	let unsubscribe: () => void
 	let unsubscribePage: () => void
 
+	let isBlogRoute = $state($page.url.pathname.startsWith('/blog'))
 	let isProjectsRoute = $state($page.url.pathname.startsWith('/projects'))
 
 	function isActiveSection(section: string) {
 		return (
 			activeSection === section.toLowerCase() ||
-			(section === 'PROJECTS' && isProjectsRoute)
+			(section === 'PROJECTS' && isProjectsRoute) ||
+			(section === 'BLOG' && isBlogRoute)
 		)
 	}
 
 	async function navigateOrScroll(event: MouseEvent, sectionId: string) {
 		event.preventDefault()
+
+		if (sectionId === 'blog') {
+			await goto('/blog')
+			return
+		}
+
 		const isHome = $page.url.pathname === '/'
 
 		async function scrollToSection() {
@@ -87,9 +95,10 @@
 
 	onMount(async () => {
 		unsubscribePage = page.subscribe(async $page => {
+			isBlogRoute = $page.url.pathname.startsWith('/blog')
 			isProjectsRoute = $page.url.pathname.startsWith('/projects')
 
-			if ($page.url.pathname === '/' || isProjectsRoute) {
+			if ($page.url.pathname === '/' || isProjectsRoute || isBlogRoute) {
 				await tick()
 				if (unsubscribe) unsubscribe()
 				const cleanup = setupObserver()
@@ -112,12 +121,14 @@
 	<div>
 		<nav class="mt-24">
 			<ul class="flex flex-col space-y-2 px-0">
-				{#each ['ABOUT', 'PROJECTS'] as section}
+				{#each ['ABOUT', 'PROJECTS', 'BLOG'] as section}
 					<li>
 						<a
-							class="group relative block px-2 py-1.5 text-left text-lg font-medium transition-all duration-300"
+							class="group relative block px-2 py-1.5 text-left text-[22px] font-medium transition-all duration-300"
 							class:active-section={isActiveSection(section)}
-							href={`/#${section.toLowerCase()}`}
+							href={section === 'BLOG'
+								? '/blog'
+								: `/#${section.toLowerCase()}`}
 							onclick={e => {
 								return navigateOrScroll(e, section.toLowerCase())
 							}}
@@ -130,7 +141,7 @@
 								{isActiveSection(section) ? '📈' : ''}
 							</span>
 							<span
-								class="relative z-10 text-neutral-e8 transition-all duration-300 group-hover:text-mint"
+								class="font-display relative z-10 text-neutral-e8 transition-all duration-300 group-hover:text-mint"
 								class:font-bold={isActiveSection(section)}
 								class:pl-6={isActiveSection(section)}
 								class:translate-x-4={isActiveSection(section)}
