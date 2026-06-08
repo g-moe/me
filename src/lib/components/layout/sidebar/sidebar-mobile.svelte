@@ -114,7 +114,7 @@
 			<span>Blog</span>
 		</a>
 
-		<div class="my-1 border-t border-[var(--glass-edge)]"></div>
+		<div class="my-1 border-t border-(--glass-edge)"></div>
 
 		<button
 			type="button"

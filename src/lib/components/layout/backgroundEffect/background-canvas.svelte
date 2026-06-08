@@ -20,7 +20,7 @@
 	}
 
 	function accent(alpha: number) {
-		return `rgba(25, 126, 128, ${alpha})`
+		return `rgba(65, 196, 162, ${alpha})`
 	}
 
 	function tick() {
