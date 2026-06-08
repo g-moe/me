@@ -37,6 +37,19 @@
 		background-color: var(--neutral-e1);
 	}
 
+	:is(
+		a,
+		button,
+		summary,
+		[role='button'],
+		[role='menuitem'],
+		input[type='button'],
+		input[type='reset'],
+		input[type='submit']
+	) {
+		cursor: pointer;
+	}
+
 	:root {
 		--radius: 0.5rem;
 
