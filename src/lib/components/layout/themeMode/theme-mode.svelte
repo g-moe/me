@@ -1,15 +1,8 @@
 <script lang="ts">
 	import { Moon, Sun } from '@lucide/svelte'
 	import { Button } from '$lib/components/ui/button'
-	import { mode, ModeWatcher, setMode, toggleMode } from 'mode-watcher'
-	import { onMount } from 'svelte'
-
-	onMount(() => {
-		setMode(mode.current ?? 'dark')
-	})
+	import { mode, toggleMode } from 'mode-watcher'
 </script>
-
-<ModeWatcher />
 
 <Button
 	aria-label="Switch theme"
