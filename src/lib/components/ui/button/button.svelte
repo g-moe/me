@@ -13,11 +13,7 @@
 </script>
 
 <ButtonPrimitive.Root
-	class={cn(
-		buttonVariants({ size, variant }),
-		'scale transition-all duration-200 hover:scale-125',
-		className
-	)}
+	class={cn(buttonVariants({ size, variant }), className)}
 	type="button"
 	{...$$restProps}
 >

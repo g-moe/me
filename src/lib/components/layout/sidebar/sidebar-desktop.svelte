@@ -38,7 +38,7 @@
 			if (el) {
 				const y = el.getBoundingClientRect().top + window.scrollY - 50
 				isNavigating = true
-				window.scrollTo({ behavior: 'smooth', top: y })
+				window.scrollTo({ top: y })
 				activeSection = sectionId
 
 				setTimeout(() => {
@@ -113,7 +113,7 @@
 	})
 </script>
 
-<div class="fixed right-8 top-8 z-[60]">
+<div class="fixed right-8 top-8 z-60">
 	<ThemeMode />
 </div>
 
@@ -124,7 +124,7 @@
 				{#each ['ABOUT', 'PROJECTS', 'BLOG'] as section}
 					<li>
 						<a
-							class="group relative block px-2 py-1.5 text-left text-[22px] font-medium transition-all duration-300"
+							class="group relative block px-2 py-1.5 text-left text-[22px] font-medium"
 							class:active-section={isActiveSection(section)}
 							href={section === 'BLOG'
 								? '/blog'
@@ -134,14 +134,14 @@
 							}}
 						>
 							<span
-								class="absolute left-0 transition-all duration-300"
+								class="absolute left-0"
 								class:opacity-0={!isActiveSection(section)}
 								class:opacity-100={isActiveSection(section)}
 							>
 								{isActiveSection(section) ? '📈' : ''}
 							</span>
 							<span
-								class="font-display relative z-10 text-neutral-e8 transition-all duration-300 group-hover:text-mint"
+								class="font-display relative z-10 text-neutral-e8 group-hover:text-mint"
 								class:font-bold={isActiveSection(section)}
 								class:pl-6={isActiveSection(section)}
 								class:translate-x-4={isActiveSection(section)}

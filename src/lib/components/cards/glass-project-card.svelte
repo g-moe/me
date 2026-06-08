@@ -28,13 +28,12 @@
 	<div class="flex flex-1 flex-col md:flex-row md:items-stretch">
 		{#if imageUrl}
 			<figure
-				class="m-0 aspect-[4/3] w-full shrink-0 overflow-hidden rounded-[0.875rem]
+				class="m-0 aspect-4/3 w-full shrink-0 overflow-hidden rounded-[0.875rem]
 					p-5 pb-0 md:w-[34%] md:p-6 md:pr-0"
 			>
 				<img
 					alt={title}
-					class="block h-full w-full rounded-xl object-cover transition-transform duration-500
-						ease-out group-hover:scale-[1.02]"
+					class="block h-full w-full rounded-xl object-cover"
 					loading="lazy"
 					src={imageUrl}
 				/>

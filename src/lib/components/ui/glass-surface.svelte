@@ -24,8 +24,7 @@
 	this={href ? 'a' : element}
 	class={`group relative flex flex-col overflow-hidden rounded-[1.125rem] border border-(--glass-edge)
 		bg-(--glass-fill) shadow-(--glass-shadow) [backdrop-filter:blur(var(--glass-blur))]
-		transition-[background,border-color,box-shadow,transform] duration-300 ease-out
-		[-webkit-backdrop-filter:blur(var(--glass-blur))] hover:-translate-y-0.5
+		[-webkit-backdrop-filter:blur(var(--glass-blur))]
 		hover:border-[color-mix(in_srgb,var(--glass-edge)_86%,rgb(var(--glass-teal)))]
 		hover:bg-[color-mix(in_srgb,rgb(var(--glass-teal))_2%,var(--glass-fill-hover))]
 		hover:shadow-[0_12px_34px_rgba(16,19,30,0.08)]

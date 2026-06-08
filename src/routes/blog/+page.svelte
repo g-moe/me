@@ -64,7 +64,7 @@
       <span class="sr-only">Search posts</span>
       <input
         class="w-full border border-(--glass-edge) bg-(--glass-fill)
-					rounded-[1.125rem] px-4 py-3 text-base text-neutral-e8 outline-none transition-colors
+					rounded-[1.125rem] px-4 py-3 text-base text-neutral-e8 outline-none
 					placeholder:text-neutral-e4 focus:border-mint"
         type="search"
         value={search}
@@ -107,7 +107,7 @@
     <div class="flex justify-center">
       <button
         class="border border-(--glass-edge) bg-(--glass-fill)
-					px-4 py-2 text-sm font-medium text-neutral-e8 transition-colors
+					px-4 py-2 text-sm font-medium text-neutral-e8
 					hover:border-mint hover:text-mint"
         type="button"
         onclick={loadMorePosts}

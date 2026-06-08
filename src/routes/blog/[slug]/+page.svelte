@@ -14,7 +14,7 @@
 <article class="space-y-8">
 	<header class="space-y-8">
 		<a
-			class="inline-flex text-xl font-medium text-mint transition-colors hover:text-secondary"
+			class="inline-flex text-xl font-medium text-mint hover:text-secondary"
 			href="/blog"
 		>
 			← Back
