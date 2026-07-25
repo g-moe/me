@@ -56,28 +56,35 @@
   />
 </svelte:head>
 
-<section class="space-y-8 py-4 md:py-6">
+<section class="space-y-8 py-4 md:py-6 animate-[boot-in_500ms_ease-out]">
   <div class="space-y-5">
-    <h1 class="font-display text-3xl font-semibold text-neutral-e8">Blog</h1>
+    <div class="border-b border-(--glass-edge) pb-4">
+      <h1 class="font-display text-3xl font-bold text-neutral-e8">
+        <span class="text-primary">03.</span> Blog
+      </h1>
+    </div>
 
     <label class="block">
       <span class="sr-only">Search posts</span>
       <input
         class="w-full border border-(--glass-edge) bg-(--glass-fill)
-					rounded-[1.125rem] px-4 py-3 text-base text-neutral-e8 outline-none
+					px-4 py-3 text-base text-neutral-e8 outline-none
 					placeholder:text-neutral-e4 focus:border-mint"
         type="search"
         value={search}
         oninput={updateSearch}
-        placeholder="Search blogs"
+        placeholder="Search blog titles"
       />
     </label>
   </div>
 
   <div class="space-y-5" aria-live="polite">
     {#each visiblePosts as post}
-      <GlassSurface class="p-5" element="article">
-        <a class="block space-y-3" href={`/blog/${post.slug}`}>
+      <GlassSurface element="article">
+        <div class="window-title">
+          <span class="size-2 bg-primary"></span> ~/blog/{post.slug}.md
+        </div>
+        <a class="block space-y-3 p-5" href={`/blog/${post.slug}`}>
           <div
             class="flex flex-wrap items-center gap-2 text-sm text-neutral-e4"
           >

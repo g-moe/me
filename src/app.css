@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap');
 @import 'tailwindcss';
 @plugin 'tailwind-scrollbar';
 
 @source './**/*.{html,js,svelte,ts}';
-
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
@@ -22,94 +21,169 @@
 	--color-system-error: var(--system-error);
 	--color-text-black: var(--text-black);
 	--color-text-white: var(--text-white);
-
 	--radius-lg: var(--radius);
-	--radius-md: calc(var(--radius) - 2px);
-	--radius-sm: calc(var(--radius) - 4px);
-
-	--font-display: 'Oxanium', ui-sans-serif, system-ui, sans-serif;
-
-	--shadow-even-accent: 0 0 4px 0 var(--secondary);
+	--radius-md: calc(var(--radius) - 1px);
+	--radius-sm: calc(var(--radius) - 2px);
+	--font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+	--font-mono: 'JetBrains Mono', ui-monospace, monospace;
+	--shadow-even-accent: 4px 4px 0 var(--secondary);
 }
 
 @layer base {
-	body {
-		background-color: var(--neutral-e1);
-	}
-
-	:is(
-		a,
-		button,
-		summary,
-		[role='button'],
-		[role='menuitem'],
-		input[type='button'],
-		input[type='reset'],
-		input[type='submit']
-	) {
-		cursor: pointer;
-	}
-
 	:root {
-		--radius: 0.5rem;
-
-		/* always the same regardless of theme */
-		--text-white: #fdfdfd;
-		--text-black: #050607;
-		/* always the same regardless of theme */
-
-		--primary: #55d6a0;
-
-		--secondary-e1: #5f9c9e;
-		--secondary: #458588;
-		--mint: #2f726a;
-
-		--neutral-e8: #050607;
-		--neutral-e7: #101316;
-		--neutral-e6: #262838;
-		--neutral-e5: #656675;
-		--neutral-e4: #7c7d8d;
-		--neutral-e3: #c6c7d8;
-		--neutral-e2: #d9daec;
-		--neutral-e1: #f4f4f9;
-		--neutral: #fdfdfd;
-
-		--system-error: #ef2424;
-
-		--glass-cool: 214, 218, 228;
-		--glass-teal: 69, 133, 136;
-		--glass-blur: 24px;
-		--glass-fill: rgba(var(--glass-cool), 0.38);
-		--glass-fill-hover: rgba(var(--glass-cool), 0.48);
-		--glass-edge: rgba(190, 196, 208, 0.38);
-		--glass-shadow: 0 8px 32px rgba(16, 19, 30, 0.08);
+		--radius: 0.125rem;
+		--text-white: #fbf1c7;
+		--text-black: #1d2021;
+		--primary: #d79921;
+		--secondary-e1: #d65d0e;
+		--secondary: #b16286;
+		--mint: #79740e;
+		--neutral-e8: #282828;
+		--neutral-e7: #3c3836;
+		--neutral-e6: #504945;
+		--neutral-e5: #665c54;
+		--neutral-e4: #7c6f64;
+		--neutral-e3: #a89984;
+		--neutral-e2: #ebdbb2;
+		--neutral-e1: #f2e5bc;
+		--neutral: #fbf1c7;
+		--system-error: #cc241d;
+		--panel: #fbf1c7;
+		--panel-alt: #ebdbb2;
+		--line: #a89984;
+		--glow: rgba(215, 153, 33, 0.14);
+		--glass-fill: var(--panel);
+		--glass-fill-hover: var(--panel-alt);
+		--glass-edge: var(--line);
+		--glass-shadow: 5px 5px 0 rgba(60, 56, 54, 0.25);
+		--glass-blur: 0px;
+		--glass-teal: 121, 116, 14;
+		color-scheme: light;
 	}
 
 	.dark {
-		--primary: #5fc9a0;
+		--primary: #fabd2f;
+		--secondary-e1: #fe8019;
+		--secondary: #d3869b;
+		--mint: #b8bb26;
+		--neutral-e8: #fbf1c7;
+		--neutral-e7: #ebdbb2;
+		--neutral-e6: #d5c4a1;
+		--neutral-e5: #bdae93;
+		--neutral-e4: #a89984;
+		--neutral-e3: #665c54;
+		--neutral-e2: #3c3836;
+		--neutral-e1: #282828;
+		--neutral: #1d2021;
+		--system-error: #fb4934;
+		--panel: #282828;
+		--panel-alt: #32302f;
+		--line: #504945;
+		--glow: rgba(250, 189, 47, 0.12);
+		--glass-fill: var(--panel);
+		--glass-fill-hover: var(--panel-alt);
+		--glass-edge: var(--line);
+		--glass-shadow: 5px 5px 0 #1d2021;
+		--glass-blur: 0px;
+		--glass-teal: 184, 187, 38;
+		color-scheme: dark;
+	}
 
-		--secondary-e1: #6aa5a8;
-		--secondary: #458588;
-		--mint: #9af2d5;
+	html {
+		scroll-behavior: smooth;
+		scrollbar-color: var(--neutral-e4) var(--neutral);
+	}
 
-		--neutral-e8: #eef4f1;
-		--neutral-e7: #e2ebe7;
-		--neutral-e6: #c8d5d0;
-		--neutral-e5: #adbbb6;
-		--neutral-e4: #7b8985;
-		--neutral-e3: #586662;
-		--neutral-e2: #1b222b;
-		--neutral-e1: #10151b;
-		--neutral: #070b10;
+	body {
+		margin: 0;
+		background-color: var(--neutral);
+		color: var(--neutral-e7);
+		font-family: 'JetBrains Mono', ui-monospace, monospace;
+		background-image:
+			linear-gradient(rgba(146, 131, 116, 0.055) 1px, transparent 1px),
+			linear-gradient(90deg, rgba(146, 131, 116, 0.055) 1px, transparent 1px);
+		background-size: 32px 32px;
+	}
 
-		--system-error: #ef2424;
+	body::after {
+		position: fixed;
+		z-index: 80;
+		inset: 0;
+		pointer-events: none;
+		content: '';
+		background: repeating-linear-gradient(
+			to bottom,
+			transparent 0,
+			transparent 3px,
+			rgba(29, 32, 33, 0.035) 4px
+		);
+	}
 
-		--glass-cool: 190, 198, 208;
-		--glass-teal: 69, 133, 136;
-		--glass-blur: 18px;
-		--glass-fill: rgba(var(--glass-cool), 0.038);
-		--glass-fill-hover: rgba(var(--glass-cool), 0.047);
-		--glass-edge: rgba(186, 192, 204, 0.09);
-		--glass-shadow: 0 12px 40px rgba(0, 0, 0, 0.26);
+	::selection {
+		background: var(--primary);
+		color: var(--text-black);
+	}
+
+	:is(a, button, summary, [role='button'], [role='menuitem'], input) {
+		cursor: pointer;
+	}
+
+	:focus-visible {
+		outline: 2px solid var(--primary);
+		outline-offset: 3px;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		*,
+		*::before,
+		*::after {
+			scroll-behavior: auto !important;
+			animation-duration: 0.01ms !important;
+			animation-iteration-count: 1 !important;
+			transition-duration: 0.01ms !important;
+		}
+	}
+}
+
+@layer components {
+	.window-title {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		border-bottom: 1px solid var(--glass-edge);
+		background: var(--neutral-e2);
+		padding: 0.55rem 0.8rem;
+		color: var(--neutral-e7);
+		font-size: 0.7rem;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+	}
+
+	.dark .window-title {
+		background: var(--neutral-e2);
+	}
+
+	.terminal-prompt::before {
+		content: '❯';
+		margin-right: 0.65rem;
+		color: var(--mint);
+	}
+}
+
+@keyframes boot-in {
+	from {
+		opacity: 0;
+		transform: translateY(12px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes cursor-blink {
+	50% {
+		opacity: 0;
 	}
 }

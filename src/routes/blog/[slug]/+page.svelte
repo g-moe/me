@@ -11,10 +11,10 @@
 	<meta name="description" content={data.post.description} />
 </svelte:head>
 
-<article class="space-y-8">
+<article class="space-y-8 animate-[boot-in_500ms_ease-out]">
 	<header class="space-y-8">
 		<a
-			class="inline-flex text-xl font-medium text-mint hover:text-secondary"
+			class="inline-flex border border-(--glass-edge) bg-neutral-e1 px-3 py-2 text-sm font-medium text-mint hover:border-primary hover:text-primary"
 			href="/blog"
 		>
 			← Back

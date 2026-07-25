@@ -4,7 +4,7 @@
 
 <Button
 	aria-label="GitHub"
-	class="text-neutral-e8 rounded-full bg-transparent p-2"
+	class="border border-(--glass-edge) bg-neutral-e1 p-2 text-neutral-e7 hover:border-primary hover:text-primary"
 	href="https://github.com/g-moe"
 	rel="noopener noreferrer"
 	target="_blank"
@@ -24,7 +24,7 @@
 
 <Button
 	aria-label="X"
-	class="text-neutral-e8 rounded-full bg-transparent p-2"
+	class="border border-(--glass-edge) bg-neutral-e1 p-2 text-neutral-e7 hover:border-primary hover:text-primary"
 	href="https://x.com/gmoe_ix"
 	rel="noopener noreferrer"
 	target="_blank"

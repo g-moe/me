@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { onDestroy, onMount } from 'svelte'
 
-	const E1 = { r: 77, g: 170, b: 125 }
-	const CORE = { r: 25, g: 128, b: 78 }
+	const E1 = { r: 250, g: 189, b: 47 }
+	const CORE = { r: 184, g: 187, b: 38 }
 	const SPRITE_W = 1400
 	const SPRITE_H = 1150
 	const DITHER = 16
@@ -152,8 +152,8 @@
 
 <canvas
 	bind:this={canvas}
-	class="pointer-events-none fixed inset-0 z-10 mix-blend-screen dark:mix-blend-plus-lighter"
-	style:opacity={isMobile() ? 0.15 : 0.2}
+	class="pointer-events-none fixed inset-0 z-10 mix-blend-multiply dark:mix-blend-plus-lighter"
+	style:opacity={isMobile() ? 0.04 : 0.08}
 	aria-hidden="true"
 >
 </canvas>

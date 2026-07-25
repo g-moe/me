@@ -20,7 +20,7 @@
 	}
 
 	function accent(alpha: number) {
-		return `rgba(65, 196, 162, ${alpha})`
+		return `rgba(250, 189, 47, ${alpha})`
 	}
 
 	function tick() {
@@ -54,6 +54,6 @@
 
 <canvas
 	bind:this={canvas}
-	class="pointer-events-none fixed inset-0 z-0 opacity-[0.43] dark:opacity-[0.58]"
+	class="pointer-events-none fixed inset-0 z-0 opacity-[0.12] dark:opacity-[0.2]"
 	aria-hidden="true"
 ></canvas>
