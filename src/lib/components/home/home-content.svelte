@@ -77,6 +77,15 @@
       />
 
       <ProjectCard
+        description="Market/Trading humor for taking some of the edge off."
+        imageUrl="/tradermemes.png"
+        newTab={true}
+        route="https://tradermemes.com"
+        tags={["Typescript", "Vite", "Canvas", "Cloudflare"]}
+        title="Trader Memes"
+      />
+
+      <ProjectCard
         description="Two versions available for use. One is a desktop application built 
 					using Python & TKinter, the other is a chrome extension built using vanilla JS/CSS."
         imageUrl="/indicator-manager.gif"
