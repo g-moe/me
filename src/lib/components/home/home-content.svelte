@@ -67,6 +67,15 @@
       />
 
       <ProjectCard
+        description="Market/Trading humor for taking some of the edge off."
+        imageUrl="/tradermemes.png"
+        newTab={true}
+        route="https://tradermemes.com"
+        tags={["Typescript", "Vite", "Canvas", "Cloudflare"]}
+        title="Trader Memes"
+      />
+
+      <ProjectCard
         description="Central hub for futures prop traders to stay in the loop.
 				 Also has a few tools to help traders on their prop trading journey."
         imageUrl="/ptb.png"
@@ -74,15 +83,6 @@
         route="https://proptradingbuddy.com"
         tags={["Astro", "React", "Tailwind", "Cloudflare"]}
         title="Prop Trading Buddy"
-      />
-
-      <ProjectCard
-        description="Market/Trading humor for taking some of the edge off."
-        imageUrl="/tradermemes.png"
-        newTab={true}
-        route="https://tradermemes.com"
-        tags={["Typescript", "Vite", "Canvas", "Cloudflare"]}
-        title="Trader Memes"
       />
 
       <ProjectCard
