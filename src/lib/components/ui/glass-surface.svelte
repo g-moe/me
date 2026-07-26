@@ -2,6 +2,7 @@
 	import type { Snippet } from 'svelte'
 
 	interface Props {
+		'aria-label'?: string
 		children: Snippet
 		class?: string
 		element?: 'article' | 'div' | 'section'
@@ -11,6 +12,7 @@
 	}
 
 	let {
+		'aria-label': ariaLabel,
 		children,
 		class: className = '',
 		element = 'div',
@@ -22,17 +24,16 @@
 
 <svelte:element
 	this={href ? 'a' : element}
-	class={`group relative flex flex-col overflow-hidden rounded-[1.125rem] border border-(--glass-edge)
-		bg-(--glass-fill) shadow-(--glass-shadow) [backdrop-filter:blur(var(--glass-blur))]
-		[-webkit-backdrop-filter:blur(var(--glass-blur))]
-		hover:border-[color-mix(in_srgb,var(--glass-edge)_86%,rgb(var(--glass-teal)))]
-		hover:bg-[color-mix(in_srgb,rgb(var(--glass-teal))_2%,var(--glass-fill-hover))]
-		hover:shadow-[0_12px_34px_rgba(16,19,30,0.08)]
-		dark:hover:bg-[color-mix(in_srgb,rgb(var(--glass-teal))_2%,var(--glass-fill-hover))]
-		dark:hover:shadow-[0_14px_36px_rgba(0,0,0,0.24)] ${className}`}
+	class={`group relative flex flex-col overflow-hidden border border-(--glass-edge)
+		bg-(--glass-fill) shadow-(--glass-shadow)
+		transition-[transform,box-shadow,border-color,background] duration-200
+		hover:-translate-x-0.5 hover:-translate-y-0.5 hover:border-primary
+		hover:bg-(--glass-fill-hover) hover:shadow-[7px_7px_0_var(--neutral)]
+		dark:hover:shadow-[7px_7px_0_#1d2021] ${className}`}
 	{href}
 	{rel}
 	{target}
+	aria-label={ariaLabel}
 >
 	{@render children()}
 </svelte:element>

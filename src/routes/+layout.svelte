@@ -20,24 +20,24 @@
 
 {#if isBlogRoute}
 	<div
-		class="bg-neutral-e1/85 dark:bg-neutral-e1/75 relative z-20 min-h-screen select-none"
+		class="relative z-20 min-h-screen select-none"
 		data-sveltekit-preload-code="eager"
 		data-sveltekit-preload-data="hover"
 	>
 		<SidebarMobile />
 
-		<main class="mx-auto w-full max-w-5xl px-6 pb-16 pt-14 md:px-10">
+		<main class="mx-auto w-full max-w-5xl px-6 pb-16 pt-24 md:px-10">
 			{@render children()}
 		</main>
 	</div>
 {:else}
 	<div
-		class="bg-neutral-e1/85 dark:bg-neutral-e1/75 relative z-20 min-h-screen select-none md:flex"
+		class="relative z-20 min-h-screen select-none md:flex"
 	>
 		<Sidebar />
 
 		<div class="flex flex-col md:w-3/5 md:pt-12">
-			<div class="w-full grow px-8 pt-20 pb-2 md:px-14 md:py-8">
+			<div class="w-full grow px-6 pt-20 pb-2 md:px-14 md:py-8">
 				{@render children()}
 			</div>
 

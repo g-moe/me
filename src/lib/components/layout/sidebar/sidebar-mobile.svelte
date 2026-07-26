@@ -38,8 +38,8 @@
 <svelte:window onkeydown={handleKeydown} />
 
 <header
-  class="fixed inset-x-0 top-0 z-60 flex h-14 items-center justify-end
-		px-4"
+  class="fixed inset-x-0 top-0 z-60 flex h-14 items-center justify-between border-b
+		border-(--glass-edge) px-4"
   style={showHeaderBg
     ? `
 			background: var(--glass-fill);
@@ -49,15 +49,18 @@
 			-webkit-backdrop-filter: blur(var(--glass-blur));
 		`
     : `
-			background: transparent;
-			border-bottom: 1px solid transparent;
+			background: var(--glass-fill);
+			border-bottom: 1px solid var(--glass-edge);
 			box-shadow: none;
 			backdrop-filter: none;
 			-webkit-backdrop-filter: none;
 		`}
 >
+  <a href="/" class="text-sm font-bold text-neutral-e8"
+    >g<span class="text-primary">.moe</span></a
+  >
   <Button
-    class="rounded-full bg-transparent text-neutral-e8 hover:bg-transparent
+    class="border border-(--glass-edge) bg-transparent text-neutral-e8 hover:bg-neutral-e2
 			focus-visible:ring-0"
     aria-expanded={isOpen}
     aria-label={isOpen ? "Close menu" : "Open menu"}
@@ -73,10 +76,7 @@
 </header>
 
 {#if isOpen}
-  <button
-    class="fixed inset-0 z-55"
-    aria-label="Close menu"
-    onclick={closeMenu}
+  <button class="fixed inset-0 z-55" aria-label="Close menu" onclick={closeMenu}
   ></button>
 
   <div

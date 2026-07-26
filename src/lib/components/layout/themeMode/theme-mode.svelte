@@ -6,7 +6,7 @@
 
 <Button
 	aria-label="Switch theme"
-	class="text-neutral-e8 rounded-full bg-transparent"
+	class="border border-(--glass-edge) bg-neutral-e1 text-neutral-e8 shadow-[3px_3px_0_var(--neutral)] hover:border-primary hover:text-primary"
 	onclick={toggleMode}
 	variant="ghost"
 >

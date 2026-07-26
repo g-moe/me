@@ -17,6 +17,8 @@
 	}
 
 	.blog-content :global(h2) {
+		border-bottom: 1px solid var(--glass-edge);
+		padding-bottom: 0.5rem;
 		margin: 2rem 0 0.75rem;
 		font-size: 1.5rem;
 	}
@@ -61,7 +63,7 @@
 	}
 
 	.blog-content :global(pre) {
-		background: color-mix(in srgb, var(--neutral-e8) 7%, transparent);
+		background: var(--panel);
 		border: 1px solid var(--glass-edge);
 		color: var(--neutral-e8);
 		overflow-x: auto;
@@ -69,7 +71,7 @@
 	}
 
 	.blog-content :global(code) {
-		background: color-mix(in srgb, var(--neutral-e8) 7%, transparent);
+		background: var(--neutral-e2);
 		color: var(--neutral-e8);
 		padding: 0.125rem 0.25rem;
 	}
